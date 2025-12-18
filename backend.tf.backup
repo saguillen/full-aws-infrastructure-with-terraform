@@ -1,0 +1,10 @@
+terraform {
+  backend "s3" {
+    profile        = "saguillen-sso"
+    bucket         = "master-cloud-terraform-state-eu-west-1-519415714586"
+    key            = "06-demo-final/terraform.tfstate"
+    region         = "eu-west-1"
+    dynamodb_table = "master-cloud-terraform-state-locks-eu-west-1-519415714586"
+    encrypt        = true
+  }
+}
