@@ -133,7 +133,7 @@ resource "aws_iam_role_policy_attachment" "eb_instance_managed" {
 resource "aws_elastic_beanstalk_environment" "env" {
   name                = "${var.project}-env"
   application         = aws_elastic_beanstalk_application.app.name
-  solution_stack_name = "64bit Amazon Linux 2023 v4.8.0 running Python 3.11"
+  solution_stack_name = "64bit Amazon Linux 2023 v4.9.0 running Python 3.11"
 
   setting {
     namespace = "aws:elasticbeanstalk:environment"
